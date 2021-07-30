@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<lang = "eng">
+<html lang = "en">
 
 <html>
 <head>
@@ -7,150 +7,49 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Dar Net</title>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+	<link rel="stylesheet" href="styles.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap" rel="stylesheet">
-	<style>
-		*{
-			box-sizing: border-box;
-		}
-		li.container{
-			display: inline;
-		} 
-		ul.container{
-			float: left;
-			/*margin-left:15px;*/
-			/*padding: 20px;*/
-		}
-		a > img{
-			width: 130px;
-			margin-top: 5px;
-		}
-		nav > a{
-			display: inline;
-			float: left;
-			
-			
-		}
-		li > a:link, li > a:visited{
-			font-family:'Poppins', sans-serif;
-			text-transform: uppercase;
-			font-weight: bold;
-			text-decoration: none;
-			display: inline;
-			color: rgb(0, 0, 0);
-			padding: 15px;
-			font-size: 85%;	
+    <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
 
-		}
-		li > a:hover, li > a:active{
-			
-			display: inline;
-			color:  skyblue;
-			border-bottom: 2px solid skyblue;
-			cursor: pointer;
-		}
-		header#home{
-			background-image: url("abstract_1.jpg");
-			padding: 0px;
-			height: auto;
-			overflow: hidden;
-		}
-
-		div#home{
-			margin: auto;
-			width: 50%;
-		}
-		body{
-			background-image: url("abstract_2.jpg");
-			background-repeat: no-repeat;
-		}
-		h1{
-			padding-left: 100px;
-			font-family:Candara;
-			font-weight: bold;
-			font-size: 40px;
-			color: skyblue;
-			float: left;
-			text-transform: uppercase;
-
-		}
-		h1 > span{
-			font-family: Candara;
-			font-weight: bold;
-			font-size: 180px;
-			color: rgb(162 221 250);
-			font-style: italic;
-		}
-		li.first_page{
-			font-family:'Poppins', sans-serif;
-			font-weight: bold;
-			font-size: 25px;
-			color: rgb(162 221 250);
-			font-style: italic;
-			padding-left: 25px;
-			margin-left: 45px;
-			text-transform: uppercase;
-
-		}
-		MARQUEE{
-            font-family:'Poppins', sans-serif;
-            font-size: 20px;
-            text-align: center;
-            font-weight: bold;
-            color: rgb(162 221 250);
-            background-color: transparent;
-        }
-        
-        /*img.speedtest{
-        	
-			width: 400px;
-			height: 450px;
-			overflow: hidden;
-			object-fit: cover;
-			object-position: %;
-			float: left;		
-		}*/
-		p{
-			font-family:'Poppins', sans-serif;
-			font-weight: bold;
-			font-size: 25px;
-			color: rgb(162 221 250);
-			font-style: italic;
-			padding-left: 25px;
-			clear: left;
-		}
-		
-		@media (min-width: 992px) and (max-width: 1199px){
-			/*h1{
-				width: 50%;
-				height: 50%;
-			}*/
-		}
-	
-
-	</style>
 </head>
 <body >
-	<header id="home">
-		<div id="home">
-			<nav>
-				<a href="#home">
-					<img src="logo.png" alt="Dar Net Powered by Dar Communications">
-				</a>
-				<ul class="container">
-						<li class = "container"><a href="#home">Home</a></li>
-						<li class = "container"><a href="#AboutUs">About Us</a></li>
-						<li class = "container"><a href="#Plans">Plans</a></li>
-						<li class = "container"><a href="#Payment_Methods">Payment Methods</a></li>
-						<li class = "container"><a href="#Products">Products</a></li>
-						<li class = "container"><a href="#Limited_Offers">Limited Time Offers</a></li>
-						<li class = "container"><a href="#ContactUs">Contact Us</a></li>
-				</ul>
-				
-			</nav>
-		</div>
+	<header class="home">
+		<nav id="header-nav" class="navbar">
+			<div class="container">
+		        <div class="navbar-header">
+		          <a href="dar_net.html" class="pull-left ">
+		            <img id="logo-img" src="logo.png">
+		          </a>
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+		            <span class="sr-only">Toggle navigation</span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		        </button>
+		        </div>
+
+		        <div id="collapsable-nav" class="collapse navbar-collapse">
+		            <ul id="nav-list" class="nav navbar-nav">
+		           		<li class = "options"><a href="#home">Home</a></li>
+						<li class = "options"><a href="#AboutUs">About Us</a></li>
+						<li class = "options"><a href="#Plans">Plans</a></li>
+						<li class = "options"><a href="#Payment_Methods">Payment Methods</a></li>
+						<li class = "options"><a href="#Products">Products</a></li>
+						<li class = "options"><a href="#Limited_Offers">Limited Time Offers</a></li>
+						<li class = "options"><a href="#ContactUs">Contact Us</a></li>
+					</ul><!-- #nav-list -->
+		        </div><!-- .collapse .navbar-collapse -->
+	      	</div>
+		
+		</nav>
 		
 	</header>
-	<MARQUEE loop="-5" scrollamount="20" width="100%">Welcome to the fine and best internet service providing Company.</MARQUEE>
+	
 	<h1> Are You Ready for <br> <span>High Speed</span> <br> Internet with Upto <br> <span>21</span>Mbps </h1>
 	
 	<!-- <img class= "speedtest"src="speedtest.png"> -->
@@ -163,6 +62,11 @@
 		<li class="first_page"> Unlimited Access</li>
 		<li class="first_page"> Constant Support</li>
 	</ul>
+
+	<!-- jQuery (Bootstrap JS plugins depend on it) -->
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
 
 </body>
 </html>
