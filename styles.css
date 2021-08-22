@@ -18,24 +18,28 @@ li > a:link, li > a:visited{
 	font-weight: bold;
 	text-decoration: none;
 	color: rgb(0, 0, 0);
-	padding: 15px;
+	padding: 5px 15px 10px;
 }
 li.options>a:hover, li.options>a:active{
-	color: skyblue;
-	border-bottom: 2px solid skyblue;
+	color: #afe2fd;
+	border-bottom: 2px solid #afe2fd;
 	cursor: pointer;
-	background-color: #0c2440;
+	background-color: #060f1e;
+  padding-bottom: 15px;
+}
+#nav-list{
+	margin-left: 25px;
+	margin-top: 10px;
 }
 header.home{
 	padding: 0px;
 	height: 50px;
-	/*overflow: hidden;*/
+  position: sticky;
+	overflow: visible;
 }
 
 body{
-	background-image: url("abstract_2.jpg");
-	background-repeat: no-repeat;
-	background-size: inherit;
+	background-color: #060f1e;
 }
 h1{
 	padding-left: 100px;
@@ -43,11 +47,10 @@ h1{
 	font-weight: bold;
 	font-size: 40px;
 	color: skyblue;
-	float: left;
 	text-transform: uppercase;
 	text-shadow: 1px 1px 1px #222;
 }
-h1 > span{
+h1>span{
 	font-family: Candara;
 	font-weight: bold;
 	font-size: 180px;
@@ -64,14 +67,7 @@ li.first_page{
 	margin-left: 45px;
 	text-transform: uppercase;
 }
-MARQUEE{
-  font-family:'Poppins', sans-serif;
-  font-size: 20px;
-  text-align: center;
-  font-weight: bold;
-  color: rgb(162 221 250);
-  background-color: transparent;
-}
+
 
 div.container{
 	margin-right: auto;
@@ -101,15 +97,78 @@ li.options {
   padding-right: 15px;
 }
 
-/*.navbar-header button.navbar-toggle, */.navbar-header .icon-bar {
+/* .navbar-header button.navbar-toggle,.navbar-header .icon-bar {
   border: 1px solid skyblue;
-}
+} */
 .navbar-header button.navbar-toggle {
   margin-top: 15px;
   vertical-align: middle;
 }
 /* END HEADER */
 
+/* FOOTER */
+.panel-footer {
+	margin-top: 30px;
+	padding-top: 35px;
+	padding-bottom: 30px;
+	background-image: url("abstract_1.jpg");
+	border-top: 0;
+  color: #060f1e;
+  }
+  .panel-footer div.row {
+	margin-bottom: 35px;
+  }
+  #hours, #address {
+	line-height: 2;
+  }
+  #hours > span, #address > span {
+	font-size: 1.3em;
+  }
+  #address p {
+	color: #557c3e;
+	font-size: .8em;
+	line-height: 1.8;
+  }
+  #testimonials {
+	font-style: italic;
+  }
+  #testimonials p:nth-child(2) {
+	margin-top: 25px;
+  }
+  /* END FOOTER */
+
+   
+  /* Main content */
+    div.main-content{
+      margin-top: 20px;
+    }
+  /* End Main Content */
+  /* Section: Contact Us */
+  form.contact{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+  div.form-floating{
+    position: relative;
+    padding: 15px 0px 0px;
+  }
+  div label.floating-label{
+    position: absolute;
+    top: 15px;
+    opacity: .6;
+  }
+  div.form-floating:hover {
+    position: unset;
+    color: skyblue;
+  }
+
+
+  /* End Section: Contact Us */
+
+
+  
 /********** Large devices only **********/
 @media (min-width: 1200px) {
 
@@ -124,6 +183,7 @@ li.options {
 		padding: 5px;
   }
   /* End Header */
+  
 }
 
 /********** Small devices only **********/
@@ -133,24 +193,28 @@ li.options {
 		padding-top: 5px;
 		margin: 0px;
   }
+  li > a:link, li > a:visited{
+	padding: 5px .5vw 10px;
+  }
+  div#collapsable-nav{
+	  padding-right: 0px;
+	  padding-left: 0px;
+  }
 
 }
 
 /********** Extra small devices only **********/
 @media (max-width: 767px) {
 	#logo-img {
-    width: 30vw;
+    width: 150px;
    	margin-left: 15px;
 		padding: 5px;
   }
   /* Header */
   #collapsable-nav a { /* Collapsed nav menu text */
-    font-size: 1.2em;
-    text-align: right;
-  }
-  #collapsable-nav a span { /* Collapsed nav menu glyph */
     font-size: 1em;
-    margin-right: 5px;
+    text-align: right;
+    margin-right: 15px;
   }
 
   #call-btn > a {
@@ -169,5 +233,10 @@ li.options {
     text-transform: uppercase;
   }
   /* End Header */
+
+  .panel-footer section {
+    margin-bottom: 30px;
+    text-align: center;
+  }
 
 }
