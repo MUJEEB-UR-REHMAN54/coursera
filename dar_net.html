@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html lang = "en">
 
-<html>
+<html lang = "en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Dar Net</title>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
     
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="styles.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap" rel="stylesheet">
@@ -18,24 +17,24 @@
 
 </head>
 <body >
+	
 	<header class="home">
-		<nav id="header-nav" class="navbar">
+		
+		<nav id="header-nav" class="navbar navbar-expand-md navbar-light ">
 			<div class="container">
 		        <div class="navbar-header">
-		          <a href="dar_net.html" class="pull-left ">
+		          <a href="./dar_net.html" class="pull-left ">
 		            <img id="logo-img" src="logo.png">
 		          </a>
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
-		            <span class="sr-only">Toggle navigation</span>
-		            <span class="icon-bar"></span>
-		            <span class="icon-bar"></span>
-		            <span class="icon-bar"></span>
-		        </button>
+				  
+				<button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false" aria-controls="collapsable-nav" aria-label="Toggle navigation">
+		            <span class="navbar-toggler-icon"></span>
+				</button>
 		        </div>
 
 		        <div id="collapsable-nav" class="collapse navbar-collapse">
 		            <ul id="nav-list" class="nav navbar-nav">
-		           		<li class = "options"><a href="#home">Home</a></li>
+		           		<li class = "options"><a href="./dar_net.html">Home</a></li>
 						<li class = "options"><a href="#AboutUs">About Us</a></li>
 						<li class = "options"><a href="#Plans">Plans</a></li>
 						<li class = "options"><a href="#Payment_Methods">Payment Methods</a></li>
@@ -50,23 +49,98 @@
 		
 	</header>
 	
-	<h1> Are You Ready for <br> <span>High Speed</span> <br> Internet with Upto <br> <span>21</span>Mbps </h1>
-	
-	<!-- <img class= "speedtest"src="speedtest.png"> -->
-	
-	<p>Providing you with:</p>
+	<div class="main-content">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-6 col-sm-4 col-xs-3">
+					<h1>Are You Ready for <br><span>High Speed</span> Internet <br>upto <span>21</span> Mbps</h1>
+					<ul class="dissc" type="disc">
+						<li class="first_page"> Better Bandwidth</li>
+						<li class="first_page"> Constant Speed</li>
+						<li class="first_page"> Unlimited Access</li>
+						<li class="first_page"> Constant Support</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
 
-	<ul class="dissc" type="disc">
-		<li class="first_page"> Better Bandwidth</li>
-		<li class="first_page"> Constant Speed</li>
-		<li class="first_page"> Unlimited Access</li>
-		<li class="first_page"> Constant Support</li>
-	</ul>
+	<section id="ContactUs" class="container-fluid">
+		<div class="row">
+			<div class="col-md-6 col-xs-12 " >
+				<form class= "contact mx-auto" action="b">
+			
+					<div class="form-floating">
+						<input id="fname" type="text" class="form-control" >
+						<label for="fname" class="floating-label"> First Name: </label>
+					</div>
+					
+		
+					<div class="form-floating">
+						<input id="lname" type="text" class="form-control" " >
+						<label for="lname" class="floating-label"> Last Name: </label>
+					</div>
+					
+		
+					<div class="form-floating">
+						<input id="dob" type="date" class="form-control" >
+						<!-- <label for="dob" class="floating-label"> Date of Birth: </label> -->
+					</div>
+					
+		
+					<div class="form-floating">
+						<input id="pnum" type="tel" class="form-control"> 
+						<label for="pnum" class="floating-label"> Phone Number: </label>
+					</div>
+					
+					<div class="form-floating ">
+						<input type="email" class="form-control" id="email" >
+						<label for="email" class="floating-label">Email address</label>
+					</div>
+		
+					<div class="form-floating">
+						<textarea name="message" id="msg" cols="30" rows="10" class="form-control"></textarea>
+						<label for="msg" class="floating-label"> Message: </label>
+					</div>
+					
+				</form>
+			</div>
+			
+		</div>
+		
+	</section>
+		
+
+	<footer class="panel-footer">
+		<div class="container">
+		  <div class="row">
+			<section id="hours" class="col-sm-4">
+			  <span>Hours:</span><br>
+			  Mon-Friday: 03:15pm - 10:00pm<br>
+			  saturday: 11:15am - 11:59pm<br>
+			  Sunday: 12:00pm - 12:00am
+			  <hr class="visible-xs">
+			</section>
+			<section id="address" class="col-sm-4">
+			  <span>Address:</span><br>
+			  Kot Shahabud Din<br>
+			  Shahdara, Lahore
+			  <p>* Technician charges may apply for the new connection as a One Time charge.</p>
+			  <hr class="visible-xs">
+			</section>
+			<section id="testimonials" class="col-sm-4">
+			  <p>"The best internet service provider with the fastest service ever!"</p>
+			  <p>"Amazing speed with the nice behaviour of the provider!"</p>
+			</section>
+		  </div>
+		  <div class="text-center">&copy; Copyright Dar Communications 2019</div>
+		</div>
+	  </footer>
 
 	<!-- jQuery (Bootstrap JS plugins depend on it) -->
-  <script src="js/jquery-2.1.4.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/script.js"></script>
-
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
+
