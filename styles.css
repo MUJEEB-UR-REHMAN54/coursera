@@ -2,83 +2,21 @@
 	box-sizing: border-box;
   font-family:'Poppins', sans-serif;
 }
-	
-#logo-img{
-	width: 130px;
-	margin-right: 15px;
-	padding: 5px;
-}
-nav > a{
-	display: block;
-	float: left;
-}
-li > a:link, li > a:visited{
-	font-size: 85%;
-	text-transform: uppercase;
-	font-weight: bold;
-	text-decoration: none;
-	color: rgb(0, 0, 0);
-	padding: 5px 15px 10px;
-}
-li.options>a:hover, li.options>a:active{
-	color: #afe2fd;
-	border-bottom: 2px solid #afe2fd;
-	cursor: pointer;
-	background-color: #060f1e;
-  padding-bottom: 15px;
-}
-#nav-list{
-	margin-left: 25px;
-	margin-top: 10px;
-}
-header.home{
-	padding: 0px;
-	height: 50px;
-  position: sticky;
-	overflow: visible;
-}
-
 body{
 	background-color: #060f1e;
 }
-h1{
-  font-size: 80%;
-	font-weight: bold;
-	font-size: 40px;
-	color: skyblue;
-	text-transform: uppercase;
-	text-shadow: 1px 1px 1px #222;
-}
-h1>span{
-	font-weight: bolder;
-	font-size: 300%;
-	color: rgb(162 221 250);
-	font-style: italic;
-}
-li.first_page{
-	font-weight: bold;
-	font-size: 25px;
-	color: rgb(162 221 250);
-	font-style: italic;
-	padding-left: 25px;
-	margin-left: 45px;
-	text-transform: uppercase;
-}
 
 
-div.container{
-	margin-right: auto;
-	margin-left: auto;
-}
-
-/** HEADER **/
+/**---------------------------------------------------------------------- HEADER ----------------------------------------------------------------------**/
 #header-nav {
 	background-image: url("abstract_1.jpg");
   border-radius: 0;
   border: 0;
+  padding: 0px;
 }
 li.options {
-	display: inline;
+	display: block;
+  float: left;
 }
 
 #phone {
@@ -93,17 +31,46 @@ li.options {
   text-align: right;
   padding-right: 15px;
 }
-
-/* .navbar-header button.navbar-toggle,.navbar-header .icon-bar {
-  border: 1px solid skyblue;
-} */
-.navbar-header button.navbar-toggle {
+header.home{
+	padding: 0px;
+  position: sticky;
+	overflow: visible;
+}
+#logo-img{
+	width: 130px;
+	margin-right: 15px;
+	padding: 5px;
+}
+nav > a, li>a{
+	display: block;
+	float: left;
+  clear: both;
+}
+li > a:link, li > a:visited{
+	font-size: 85%;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-decoration: none;
+	color: rgb(0, 0, 0);
+	padding: 10px 15px 10px;
+}
+li.options>a:hover, li.options>a:active{
+	color: #afe2fd;
+  border-bottom: 1px solid #afe2fd;
+	cursor: pointer;
+	background-color: #060f1e;
+}
+#nav-list{
+	margin-left: 25px;
+	margin-top: 10px;
+}
+.navbar-header button.navbar-toggle{
   margin-top: 15px;
   vertical-align: middle;
 }
-/* END HEADER */
+/*---------------------------------------------------------------------- END HEADER ---------------------------------------------------------------------- */
 
-/* FOOTER */
+/*---------------------------------------------------------------------- FOOTER ----------------------------------------------------------------------*/
 .panel-footer {
 	margin-top: 30px;
 	padding-top: 35px;
@@ -132,21 +99,45 @@ li.options {
   #testimonials p:nth-child(2) {
 	margin-top: 25px;
   }
-  /* END FOOTER */
+  /*---------------------------------------------------------------------- END FOOTER ----------------------------------------------------------------------*/
 
    
-  /* Main content */
+  /*---------------------------------------------------------------------- Main content ----------------------------------------------------------------------*/
     div.main-content{
       margin-top: 20px;
+      clear: both;
     }
     div#jumbotron_1 img{
       margin-top: 50px;
       width: 50px;
       width: inherit;
     }
-  /* End Main Content */
+    h1{
+      font-size: 80%;
+      font-weight: bold;
+      font-size: 40px;
+      color: skyblue;
+      text-transform: uppercase;
+      text-shadow: 1px 1px 1px #222;
+    }
+    h1>span{
+      font-weight: bolder;
+      font-size: 300%;
+      color: rgb(162 221 250);
+      font-style: italic;
+    }
+    li.first_page{
+      font-weight: bold;
+      font-size: 25px;
+      color: rgb(162 221 250);
+      font-style: italic;
+      padding-left: 25px;
+      margin-left: 45px;
+      text-transform: uppercase;
+    }
+  /*---------------------------------------------------------------------- End Main Content ----------------------------------------------------------------------*/
 
-  /* Section: Contact Us */
+  /*---------------------------------------------------------------------- Section: Contact Us ----------------------------------------------------------------------*/
   Section#ContactUs{
     height: 100%;
     margin: 100px 0px;
@@ -162,43 +153,45 @@ li.options {
     width: 50%;
   }
   div.form-floating{
-    position: relative;
     padding: 15px 0px 0px;
+    
   }
   div label.floating-label{
-    position: absolute;
-    top: 15px;
+    font-weight: bold;
     opacity: .6;
-  }
-  div.form-floating:hover {
-    position: unset;
     color: #fff;
   }
+  div input.form-control{
+    font-weight: bold;
+    color: black;
+  }
+  
+  
 
 
-  /* End Section: Contact Us */
+  /*---------------------------------------------------------------------- End Section: Contact Us ----------------------------------------------------------------------*/
 
 
   
-/********** Large devices only **********/
+/****************************************************************** Large devices only ******************************************************************/
 @media (min-width: 1200px) {
 
 }
 
-/********** Medium devices only **********/
+/****************************************************************** Medium devices only *******************************************************************/
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* Header */
+  /* ----------------- Header ----------------*/
   #logo-img {
     width: 130px;
     margin-right: 15px;
 		padding: 5px;
   }
   
-  /* End Header */
+  /*----------------- End Header ------------------*/
   
 }
 
-/********** Small devices only **********/
+/******************************************************************* Small devices only *******************************************************************/
 @media (min-width: 768px) and (max-width: 991px) {
 	#logo-img {
     width: 150px;
@@ -215,14 +208,14 @@ li.options {
 
 }
 
-/********** Extra small devices only **********/
+/******************************************************************* Extra small devices only *******************************************************************/
 @media (max-width: 767px) {
 	#logo-img {
     width: 150px;
    	margin-left: 15px;
 		padding: 5px;
   }
-  /* Header */
+  /*----------------- Header --------------*/
   #collapsable-nav a { /* Collapsed nav menu text */
     font-size: 1em;
     text-align: right;
@@ -244,7 +237,7 @@ li.options {
     letter-spacing: .1em;
     text-transform: uppercase;
   }
-  /* End Header */
+  /*----------------- End Header -----------------*/
 
   .panel-footer section {
     margin-bottom: 30px;
@@ -256,4 +249,5 @@ li.options {
   }
 
 }
+
 
