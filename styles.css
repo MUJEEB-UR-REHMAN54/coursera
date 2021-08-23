@@ -1,5 +1,6 @@
 *{
 	box-sizing: border-box;
+  font-family:'Poppins', sans-serif;
 }
 	
 #logo-img{
@@ -12,7 +13,6 @@ nav > a{
 	float: left;
 }
 li > a:link, li > a:visited{
-	font-family:'Poppins', sans-serif;
 	font-size: 85%;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -42,8 +42,7 @@ body{
 	background-color: #060f1e;
 }
 h1{
-	padding-left: 100px;
-	font-family:Candara;
+  font-size: 80%;
 	font-weight: bold;
 	font-size: 40px;
 	color: skyblue;
@@ -51,14 +50,12 @@ h1{
 	text-shadow: 1px 1px 1px #222;
 }
 h1>span{
-	font-family: Candara;
-	font-weight: bold;
-	font-size: 180px;
+	font-weight: bolder;
+	font-size: 300%;
 	color: rgb(162 221 250);
 	font-style: italic;
 }
 li.first_page{
-	font-family:'Poppins', sans-serif;
 	font-weight: bold;
 	font-size: 25px;
 	color: rgb(162 221 250);
@@ -142,10 +139,24 @@ li.options {
     div.main-content{
       margin-top: 20px;
     }
+    div#jumbotron_1 img{
+      margin-top: 50px;
+      width: 50px;
+      width: inherit;
+    }
   /* End Main Content */
+
   /* Section: Contact Us */
+  Section#ContactUs{
+    height: 100%;
+    margin: 100px 0px;
+  }
+  Section#ContactUs>h2{
+	  font-weight: bold;
+    color: rgb(162 221 250);
+    font-size: 300%;
+  }
   form.contact{
-    margin-top: 50px;
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -161,7 +172,7 @@ li.options {
   }
   div.form-floating:hover {
     position: unset;
-    color: skyblue;
+    color: #fff;
   }
 
 
@@ -182,6 +193,7 @@ li.options {
     margin-right: 15px;
 		padding: 5px;
   }
+  
   /* End Header */
   
 }
@@ -239,4 +251,9 @@ li.options {
     text-align: center;
   }
 
+  div#jumbotron_1 img{
+    
+  }
+
 }
+
