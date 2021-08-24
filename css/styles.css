@@ -1,64 +1,22 @@
-body {
-  font-size: 16px;
-  color: #fff;
-  background-color: #61122f;
-  font-family: 'Oxygen', sans-serif;
+*{
+	box-sizing: border-box;
+  font-family:'Poppins', sans-serif;
+}
+body{
+	background-color: #060f1e;
 }
 
-/** HEADER **/
+
+/**---------------------------------------------------------------------- HEADER ----------------------------------------------------------------------**/
 #header-nav {
-  background-color: #f6b319;
+	background-image: url("../abstract_1.jpg");
   border-radius: 0;
   border: 0;
+  padding: 0px;
 }
-
-#logo-img {
-  background: url('../images/restaurant-logo_large.png') no-repeat;
-  width: 150px;
-  height: 150px;
-  margin: 10px 15px 10px 0;
-}
-
-.navbar-brand {
-  padding-top: 25px;
-}
-
-.navbar-brand h1 { /* Restaurant name */
-  font-family: 'Lora', serif;
-  color: #557c3e;
-  font-size: 1.5em;
-  text-transform: uppercase;
-  font-weight: bold;
-  text-shadow: 1px 1px 1px #222;
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: .75;
-}
-.navbar-brand a:hover, .navbar-brand a:focus {
-  text-decoration: none;
-}
-.navbar-brand p { /* Kosher cert */
-  color: #000;
-  text-transform: uppercase;
-  font-size: .7em;
-  margin-top: 15px;
-}
-.navbar-brand p span { /* Star-K */
-  vertical-align: middle;
-}
-
-#nav-list {
-  margin-top: 10px;
-}
-#nav-list a {
-  color: #951C49;
-  text-align: center;
-}
-#nav-list a:hover {
-  background: #E7E7E7;
-}
-#nav-list a span {
-  font-size: 1.8em;
+li.options {
+	display: block;
+  float: left;
 }
 
 #phone {
@@ -73,87 +31,202 @@ body {
   text-align: right;
   padding-right: 15px;
 }
-
-.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
-  border: 1px solid #61122f;
+header.home{
+	padding: 0px;
+  position: sticky;
+	overflow: visible;
 }
-.navbar-header button.navbar-toggle {
+#logo-img{
+	width: 130px;
+	margin-right: 15px;
+	padding: 5px;
+}
+nav > a, li>a{
+	display: block;
+	float: left;
   clear: both;
-  margin-top: -30px;
 }
-/* END HEADER */
-
-/* HOME PAGE */
-.container .jumbotron {
-  box-shadow: 0 0 50px #3F0C1F;
-  border: 2px solid #3F0C1F;
+li > a:link, li > a:visited{
+	font-size: 85%;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-decoration: none;
+	color: rgb(0, 0, 0);
+	padding: 10px 15px 10px;
 }
+li.options>a:hover, li.options>a:active{
+	color: #afe2fd;
+  border-bottom: 1px solid #afe2fd;
+	cursor: pointer;
+	background-color: #060f1e;
+}
+#nav-list{
+	margin-left: 25px;
+	margin-top: 10px;
+}
+.navbar-header button.navbar-toggle{
+  margin-top: 15px;
+  vertical-align: middle;
+}
+/*---------------------------------------------------------------------- END HEADER ---------------------------------------------------------------------- */
 
-/* END HOME PAGE */
+/*---------------------------------------------------------------------- FOOTER ----------------------------------------------------------------------*/
+.panel-footer {
+	margin-top: 30px;
+	padding-top: 35px;
+	padding-bottom: 30px;
+	background-image: url("../abstract_1.jpg");
+	border-top: 0;
+  color: #060f1e;
+  }
+  .panel-footer div.row {
+	margin-bottom: 35px;
+  }
+  #hours, #address {
+	line-height: 2;
+  }
+  #hours > span, #address > span {
+	font-size: 1.3em;
+  }
+  #address p {
+	color: #557c3e;
+	font-size: .8em;
+	line-height: 1.8;
+  }
+  #testimonials {
+	font-style: italic;
+  }
+  #testimonials p:nth-child(2) {
+	margin-top: 25px;
+  }
+  /*---------------------------------------------------------------------- END FOOTER ----------------------------------------------------------------------*/
 
-/********** Large devices only **********/
+   
+  /*---------------------------------------------------------------------- Main content ----------------------------------------------------------------------*/
+    div.main-content{
+      margin-top: 20px;
+      clear: both;
+    }
+    div#jumbotron_1 img{
+      margin-top: 50px;
+      width: inherit;
+      border-radius: 5%;
+    }
+    h1{
+      font-size: 80%;
+      font-weight: bold;
+      font-size: 40px;
+      color: skyblue;
+      text-transform: uppercase;
+      text-shadow: 1px 1px 1px #222;
+    }
+    h1>span{
+      font-weight: bolder;
+      font-size: 300%;
+      color: rgb(162 221 250);
+      font-style: italic;
+    }
+    li.first_page{
+      font-weight: bold;
+      font-size: 25px;
+      color: rgb(162 221 250);
+      font-style: italic;
+      padding-left: 25px;
+      margin-left: 45px;
+      text-transform: uppercase;
+    }
+  /*---------------------------------------------------------------------- End Main Content ----------------------------------------------------------------------*/
+
+  /*---------------------------------------------------------------------- Section: Contact Us ----------------------------------------------------------------------*/
+  Section#ContactUs{
+    height: 100%;
+    margin: 100px 0px;
+  }
+  Section#ContactUs>h2{
+	  font-weight: bold;
+    color: rgb(162 221 250);
+    font-size: 300%;
+  }
+  form.contact{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+  div.form-floating{
+    padding: 15px 0px 0px;
+    
+  }
+  div label.floating-label{
+    font-weight: bold;
+    opacity: .6;
+    color: #fff;
+  }
+  div input.form-control, div textarea.form-control{
+    font-weight: 700;
+  }
+  div input.form-control::placeholder, div textarea.form-control::placeholder{
+    opacity: .5;
+  }
+  div#messages{
+    color: #fff;
+  }
+  
+
+
+  /*---------------------------------------------------------------------- End Section: Contact Us ----------------------------------------------------------------------*/
+
+
+  
+/****************************************************************** Extra Large devices only ******************************************************************/
 @media (min-width: 1200px) {
-  .container .jumbotron {
-    background: url('../images/jumbotron_1200.jpg') no-repeat;
-    height: 675px;
-  }
+
 }
 
-/********** Medium devices only **********/
+/****************************************************************** large devices only *******************************************************************/
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* Header */
+  /* ----------------- Header ----------------*/
   #logo-img {
-    background: url('../images/restaurant-logo_medium.png') no-repeat;
-    width: 100px;
-    height: 100px;
-    margin: 5px 5px 5px 0;
+    width: 130px;
+    margin-right: 15px;
+		padding: 5px;
   }
-  /* End Header */
-
-  /* Home Page */
-  .container .jumbotron {
-    background: url('../images/jumbotron_992.jpg') no-repeat;
-    height: 558px;
-  }
-  /* End Home Page */
+  
+  /*----------------- End Header ------------------*/
+  
 }
 
-/********** Small devices only **********/
+/******************************************************************* medium devices only *******************************************************************/
 @media (min-width: 768px) and (max-width: 991px) {
-  /* Home Page */
-  .container .jumbotron {
-    background: url('../images/jumbotron_768.jpg') no-repeat;
-    height: 432px;
+	#logo-img {
+    width: 150px;
+		padding-top: 5px;
+		margin: 0px;
   }
-  /* End Home Page */
+  li > a:link, li > a:visited{
+	padding: 5px .5vw 10px;
+  }
+  div#collapsable-nav{
+	  padding-right: 0px;
+	  padding-left: 0px;
+  }
+  form.contact{
+    width: 80%;
+  }
 
 }
 
-/********** Extra small devices only **********/
+/******************************************************************* small devices only *******************************************************************/
 @media (max-width: 767px) {
-  /* Header */
-  .navbar-brand {
-    padding-top: 10px;
-    height: 80px;
+	#logo-img {
+    width: 150px;
+   	margin-left: 15px;
+		padding: 5px;
   }
-  .navbar-brand h1 { /* Restaurant name */
-    padding-top: 10px;
-    font-size: 5vw; /* 1vw = 1% of viewport width */
-  }
-  .navbar-brand p { /* Kosher cert */
-    font-size: .6em;
-    margin-top: 12px;
-  }
-  .navbar-brand p img { /* Star-K */
-    height: 20px;
-  }
-
+  /*----------------- Header --------------*/
   #collapsable-nav a { /* Collapsed nav menu text */
-    font-size: 1.2em;
-  }
-  #collapsable-nav a span { /* Collapsed nav menu glyph */
     font-size: 1em;
-    margin-right: 5px;
+    text-align: right;
+    margin-right: 15px;
   }
 
   #call-btn > a {
@@ -171,12 +244,14 @@ body {
     letter-spacing: .1em;
     text-transform: uppercase;
   }
-  /* End Header */
+  /*----------------- End Header -----------------*/
 
-  /* Home Page */
-  .container .jumbotron {
-    margin-top: 30px;
-    padding: 0;
+  .panel-footer section {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  form.contact{
+    width: 80%;
   }
 
 }
