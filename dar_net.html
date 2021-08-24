@@ -9,11 +9,13 @@
     
     <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="./css/styles.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+
+	<script src="./js/script.js"></script>
 
 </head>
 <body >
@@ -71,8 +73,8 @@
 	<section id="ContactUs" class="container-fluid">
 		<h2>Contact Us</h2>
 		<div class="row">
-			<div class="col-md-6 col-xs-12 " >
-				<form class= "contact mx-auto" action="b">
+			<div class="col-lg-6 col-xs-12 " >
+				<form class= "contact mx-auto" action="backend.php">
 			
 					<div class="form-floating">
 						<label for="fname" class="floating-label"> First Name: </label>
@@ -98,17 +100,20 @@
 					</div>
 					
 					<div class="form-floating ">
-						<label for="email" class="floating-label">Email address</label>
-						<input type="email" class="form-control" id="email" placeholder="abc123@mail.com">
+						<label for="Email" class="floating-label">Email address</label>
+						<input type="email" class="form-control" id="Email" placeholder="abc123@mail.com">
 					</div>
 		
 					<div class="form-floating">
 						<label for="msg" class="floating-label"> Message: </label>
 						<textarea name="message" id="msg" cols="30" rows="10" class="form-control" placeholder="Message"></textarea>
 					</div>
-					
+										
 				</form>
+				<button id="_send">Send</button>
+				
 			</div>
+			<div id="messages" class="col-lg-6 col-xs-12"></div>
 			
 		</div>
 		
@@ -140,12 +145,14 @@
 		  <div class="text-center">&copy; Copyright Dar Communications 2019</div>
 		</div>
 	  </footer>
-
+	
 	<!-- jQuery (Bootstrap JS plugins depend on it) -->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
+
+
 
 
