@@ -106,35 +106,40 @@ li.options>a:hover, li.options>a:active{
     div.main-content{
       margin-top: 20px;
       clear: left;
-      text-align: center;
     }
     div#jumbotron_1 img{
       width: inherit;
       border-radius: 5%;
     }
+    div.Main_heading{
+      position: relative;
+    }
     h2.main_msg{
-      margin-top: 100px;
+      position: absolute;
+      top: 155px;
       font-weight: bold;
-      font-size: 300%;
+      font-size: 2vw;
       color: skyblue;
       text-transform: uppercase;
       text-shadow: 1px 1px 1px #222;
+      text-align: center;
+      vertical-align: center;
     }
     h2.main_msg>span{
       font-weight: bolder;
-      font-size: 300%;
+      font-size: 8vw;
       color: rgb(162 221 250);
       font-style: italic;
     }
     li.first_page{
       font-weight: bold;
-      font-size: 25px;
+      font-size: 1.9vw;
       color: rgb(162 221 250);
       font-style: italic;
-      padding-left: 25px;
-      margin-left: 45px;
-      text-transform: uppercase;
       text-decoration: none;
+    }
+    ul.dissc{
+      margin-top: 10%;
     }
   /*---------------------------------------------------------------------- End Main Content ----------------------------------------------------------------------*/
 
@@ -253,6 +258,12 @@ li.options>a:hover, li.options>a:active{
   }
   form.contact{
     width: 80%;
+  }
+  h2.main_msg{
+    font-size: 4vw;
+  }
+  h2.main_msg>span{
+    font-size: 12vw;
   }
 
 }
