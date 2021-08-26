@@ -24,7 +24,7 @@ header.home{
 	overflow: visible;
 }
 #logo-img{
-	width: 130px;
+	width: 8vw;
 	margin-right: 15px;
 	padding: 5px;
 }
@@ -34,7 +34,7 @@ nav > a, li>a{
   clear: both;
 }
 li > a:link, li > a:visited{
-	font-size: 85%;
+	font-size: 0.7vw;
 	text-transform: uppercase;
 	font-weight: bold;
 	text-decoration: none;
@@ -159,6 +159,25 @@ div#collapsable-nav{
   }
   div#messages{
     color: #fff;
+  }
+  div.message{
+    margin: 10px 0px 10px;
+    border: 0px;
+    border-radius: 20px;
+    background-color:#fff;
+    color: #060f1e;
+  }
+  div.jname, div.jphn_num, div.jemail{
+    font-weight: bold;
+    padding-left: 15px;
+  }
+  div.jmsg_body{
+    font-style: italic;
+    padding-left: 15px;
+  }
+  button.btn{
+    margin-right: 10px;
+    margin-left: 15px;
   }
   
 
