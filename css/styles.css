@@ -18,19 +18,6 @@ li.options {
 	display: block;
   float: left;
 }
-
-#phone {
-  margin-top: 5px;
-}
-#phone a { /* Phone number */
-  text-align: right;
-  padding-bottom: 0;
-}
-#phone div { /* We Deliver */
-  color: #557c3e;
-  text-align: right;
-  padding-right: 15px;
-}
 header.home{
 	padding: 0px;
   position: sticky;
@@ -60,14 +47,14 @@ li.options>a:hover, li.options>a:active{
 	cursor: pointer;
 	background-color: #060f1e;
 }
-#nav-list{
+div#collapsable-nav{
 	margin-left: 25px;
 	margin-top: 10px;
 }
-.navbar-header button.navbar-toggle{
-  margin-top: 15px;
-  vertical-align: middle;
-}
+/* button.navbar-toggler{
+  float: right;
+} */
+
 /*---------------------------------------------------------------------- END HEADER ---------------------------------------------------------------------- */
 
 /*---------------------------------------------------------------------- FOOTER ----------------------------------------------------------------------*/
@@ -111,11 +98,8 @@ li.options>a:hover, li.options>a:active{
       width: inherit;
       border-radius: 5%;
     }
-    div.Main_heading{
-      position: relative;
-    }
     h2.main_msg{
-      position: absolute;
+      position: relative;
       top: 155px;
       font-weight: bold;
       font-size: 2vw;
@@ -260,6 +244,7 @@ li.options>a:hover, li.options>a:active{
     width: 80%;
   }
   h2.main_msg{
+    top: 20px;
     font-size: 4vw;
   }
   h2.main_msg>span{
