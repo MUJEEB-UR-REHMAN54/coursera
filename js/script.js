@@ -3,21 +3,64 @@ $(function(){
     // send_button.onclick = sendMessage;
 
     $("#_send").click(sendMessage);
-    $("#messages").on("click","button", function(){
-        $(this).remove();
-    })
+    $("#messages").on("click","#Del_btn", function(){
+        var self = this;
+        del_msg(self);
+    });
+    $("#messages").on("click", "#Ed_btn", edit_msg)
 });
 
 function sendMessage() {
     
 
-    var _First_Name = document.getElementById("fname").value;
-    var _Last_Name = document.getElementById("lname").value;;
-    var _Phone_Number = document.getElementById("pnum").value;
-    var _Email = document.getElementById("Email").value;
-    var _Message_Body = document.getElementById("msg").value;
+    var _First_Name = $("#fname").val();
+    var _Last_Name = $("#lname").val();;
+    var _Phone_Number = $("#pnum").val();
+    var _Email = $("#Email").val();
+    var _Message_Body = $("#msg").val();
     var _Full_Name = _First_Name + " " + _Last_Name;
+
+    $("#fname").val("");
+    $("#lname").val("");
+    $("#pnum").val("");
+    $("#Email").val("");
+    $("#msg").val("");
+
+    var isempty = false;
+    if(!_First_Name){
+        $("#fname").addClass("empty");
+        isempty = true;
+    }else{
+        $("#fname").removeClass("empty");
+    }
+    if(!_Last_Name){
+        $("#lname").addClass("empty");
+        isempty = true;
+    }else{
+        $("#lname").removeClass("empty");
+    }
+    if(!_Phone_Number){
+        $("#pnum").addClass("empty");
+        isempty = true;
+    }else{
+        $("#pnum").removeClass("empty");
+    }
+    if(!_Email){
+        $("#Email").addClass("empty");
+        isempty = true;
+    }else{
+        $("#Email").removeClass("empty");
+    }
+    if(!_Message_Body){
+        $("#msg").addClass("empty");
+        isempty = true;
+    }else{
+        $("#msg").removeClass("empty");
+    }
     
+    if(isempty){
+        return;
+    }
     //to understand different eays to add HTML element through jquery.
     //https://stackoverflow.com/questions/10619445/the-preferred-way-of-creating-a-new-element-with-jquery
 
@@ -92,7 +135,7 @@ function sendMessage() {
     $($div_1).append(_Full_Name);
 
     var $div_2 = $("<div></div>");
-    $($div_2).addClass("jmsg_bodys");
+    $($div_2).addClass("jmsg_body");
     $($div_2).append(_Message_Body);
 
     var $div_3 = $("<div></div>");
@@ -106,17 +149,15 @@ function sendMessage() {
     var $btn_0 = $("<button></button>");
     $($btn_0).addClass("btn btn-danger");
     $($btn_0).attr("type", "button");
+    $($btn_0).attr("id", "Del_btn");
     $($btn_0).text("Delete");
 
     var $btn_1 = $("<button></button>");
     $($btn_1).addClass("btn btn-warning");
     $($btn_1).attr("type", "button");
+    $($btn_1).attr("id", "Ed_btn");
     $($btn_1).text("Edit");
 
-    var $btn_2 = $("<button></button>");
-    $($btn_2).addClass("btn btn-primary");
-    $($btn_2).attr("type", "button");
-    $($btn_2).text("Update");
     
     var $div_0 = $("<div></div>");
     $($div_0).addClass("message");
@@ -124,9 +165,40 @@ function sendMessage() {
     $($div_0).append($div_2);
     $($div_0).append($div_3);
     $($div_0).append($div_4);
+
+    var $div_m = $("<div></div>");
+    $($div_m).addClass("outer_msg");
+    $($div_m).append($div_0);
+    $($div_m).append($btn_0);
+    $($div_m).append($btn_1);
+
+
     
-    $("#messages").append($btn_0);
-    $("#messages").append($div_0);
-    $("#messages").append($btn_1);
-    $("#messages").append($btn_2);
+    $("#messages").append($div_m);
+}
+
+function del_msg(self){
+    $(self).parent().remove();
+}
+
+function edit_msg(){
+    var $parent_1 = $(this).parent();
+
+    var $_div_0 = $($parent_1).children("div");
+
+    // var $_div_1 = $($_div_0).children(".jname").get(0).innerHTML;   //// same as used below gives the innerhtml.
+    var $_div_1 = $($_div_0).children(".jname").html();
+    var $_div_2 = $($_div_0).children(".jmsg_body").html();
+    var $_div_3 = $($_div_0).children(".jemail").html();
+    var $_div_4 = $($_div_0).children(".jphn_num").html();
+    var $f_name = $_div_1.split(" ");
+    
+    $("#fname").val($f_name[0]);
+    $("#lname").val($f_name[1]);
+    $("#msg").val($_div_2);
+    $("#pnum").val($_div_4);
+    $("#Email").val($_div_3);
+    var self = this;    
+    del_msg(self);
+
 }
