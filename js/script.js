@@ -20,12 +20,6 @@ function sendMessage() {
     var _Message_Body = $("#msg").val();
     var _Full_Name = _First_Name + " " + _Last_Name;
 
-    $("#fname").val("");
-    $("#lname").val("");
-    $("#pnum").val("");
-    $("#Email").val("");
-    $("#msg").val("");
-
     var isempty = false;
     if(!_First_Name){
         $("#fname").addClass("empty");
@@ -61,6 +55,13 @@ function sendMessage() {
     if(isempty){
         return;
     }
+    console.log("It is not returning back man!!!!!!");
+    
+    $("#fname").val("");
+    $("#lname").val("");
+    $("#pnum").val("");
+    $("#Email").val("");
+    $("#msg").val("");
     //to understand different eays to add HTML element through jquery.
     //https://stackoverflow.com/questions/10619445/the-preferred-way-of-creating-a-new-element-with-jquery
 
