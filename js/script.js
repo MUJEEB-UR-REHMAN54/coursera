@@ -3,6 +3,9 @@ $(function(){
     // send_button.onclick = sendMessage;
 
     $("#_send").click(sendMessage);
+    $("#messages").on("click","button", function(){
+        $(this).remove();
+    })
 });
 
 function sendMessage() {
@@ -100,15 +103,20 @@ function sendMessage() {
     $($div_4).addClass("jphn_num");
     $($div_4).append(_Phone_Number);
 
+    var $btn_0 = $("<button></button>");
+    $($btn_0).addClass("btn btn-danger");
+    $($btn_0).attr("type", "button");
+    $($btn_0).text("Delete");
+
     var $btn_1 = $("<button></button>");
     $($btn_1).addClass("btn btn-warning");
     $($btn_1).attr("type", "button");
     $($btn_1).text("Edit");
 
     var $btn_2 = $("<button></button>");
-    $($btn_2).addClass("btn btn-danger");
+    $($btn_2).addClass("btn btn-primary");
     $($btn_2).attr("type", "button");
-    $($btn_2).text("Delete");
+    $($btn_2).text("Update");
     
     var $div_0 = $("<div></div>");
     $($div_0).addClass("message");
@@ -117,6 +125,7 @@ function sendMessage() {
     $($div_0).append($div_3);
     $($div_0).append($div_4);
     
+    $("#messages").append($btn_0);
     $("#messages").append($div_0);
     $("#messages").append($btn_1);
     $("#messages").append($btn_2);
