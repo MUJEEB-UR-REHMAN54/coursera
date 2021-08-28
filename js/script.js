@@ -1,7 +1,9 @@
-window.onload = function(){
-    var send_button = document.getElementById("_send");
-    send_button.onclick = sendMessage;
-};
+$(function(){
+    // var send_button = document.getElementById("_send");
+    // send_button.onclick = sendMessage;
+
+    $("#_send").click(sendMessage);
+});
 
 function sendMessage() {
     var _First_Name = document.getElementById("fname").value;
@@ -14,6 +16,7 @@ function sendMessage() {
     var _phn_num = document.createTextNode(_Phone_Number);
     var _email = document.createTextNode(_Email);
     var _msg_bdy = document.createTextNode(_Message_Body);
+
     var div_1 = document.createElement("div");
     div_1.setAttribute("class", "jname");
     div_1.appendChild(_name);
