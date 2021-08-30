@@ -7,7 +7,9 @@ $(function(){
         var self = this;
         del_msg(self);
     });
-    $("#messages").on("click", "#Ed_btn", edit_msg)
+    $("#messages").on("click", "#Ed_btn", edit_msg);
+    GetRequest();
+
 });
 
 function sendMessage() {
@@ -55,7 +57,6 @@ function sendMessage() {
     if(isempty){
         return;
     }
-    console.log("It is not returning back man!!!!!!");
     
     $("#fname").val("");
     $("#lname").val("");
@@ -133,18 +134,22 @@ function sendMessage() {
     //------------------------------------------------------------(with jquery)4th way to insert an html element.
     var $div_1 = $("<div>");
     $($div_1).addClass("jname");
+    $($div_1).append("Name: ");
     $($div_1).append(_Full_Name);
 
     var $div_2 = $("<div></div>");
     $($div_2).addClass("jmsg_body");
+    $($div_2).append("Message: ");
     $($div_2).append(_Message_Body);
 
     var $div_3 = $("<div></div>");
     $($div_3).addClass("jemail");
+    $($div_3).append("Email: ");
     $($div_3).append(_Email);
 
     var $div_4 = $("<div></div>");
     $($div_4).addClass("jphn_num");
+    $($div_4).append("Contact: ");
     $($div_4).append(_Phone_Number);
 
     var $btn_0 = $("<button></button>");
@@ -202,4 +207,21 @@ function edit_msg(){
     var self = this;    
     del_msg(self);
 
+}
+
+
+function GetRequest(){
+    console.log("The function is exucuting.");
+    $.ajax({
+        url:"https://usman-recipes.herokuapp.com/api/recipes",
+        method: "GET",
+        success: function(response){
+            console.log(response);
+            var response_n = $("#messages");
+            for(var i = 0; i < response.length; i++){
+                response_n.append(`<div> <h3> ${response[i].title} </h3></div>`);
+            }
+
+        }
+    })
 }

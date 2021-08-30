@@ -137,7 +137,7 @@ div#collapsable-nav{
     color: rgb(162 221 250);
     font-size: 300%;
   }
-  form.contact{
+  div.contact{
     display: flex;
     flex-direction: column;
     width: 50%;
