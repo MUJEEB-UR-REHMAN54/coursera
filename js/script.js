@@ -148,13 +148,13 @@ function sendMessage() {
     $($div_4).append(_Phone_Number);
 
     var $btn_0 = $("<button></button>");
-    $($btn_0).addClass("btn btn-danger");
+    $($btn_0).addClass("btn btn-danger btn-sm");
     $($btn_0).attr("type", "button");
     $($btn_0).attr("id", "Del_btn");
     $($btn_0).text("Delete");
 
     var $btn_1 = $("<button></button>");
-    $($btn_1).addClass("btn btn-warning");
+    $($btn_1).addClass("btn btn-warning btn-sm");
     $($btn_1).attr("type", "button");
     $($btn_1).attr("id", "Ed_btn");
     $($btn_1).text("Edit");
