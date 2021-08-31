@@ -9,6 +9,7 @@ $(function(){
     });
     $("#messages").on("click", "#Ed_btn", edit_msg);
     GetRequest();
+    $("#apis").on("click", "#del_rec", DeleteRecord);
 
 });
 
@@ -208,7 +209,19 @@ function edit_msg(){
     del_msg(self);
 
 }
-
+function DeleteRecord(){
+    console.log("Delete button is pressed");
+    var this_btn = $(this);
+    var parent_div = this_btn.closest(".recipie");
+    var Id = parent_div.attr("recipie_id");
+    $.ajax({
+        url:"https://usman-recipes.herokuapp.com/api/recipes/"+Id,
+        method: "DELETE",
+        success: function(response){
+            GetRequest();
+        }
+    })
+}
 
 function GetRequest(){
     console.log("The function is exucuting.");
@@ -217,11 +230,13 @@ function GetRequest(){
         method: "GET",
         success: function(response){
             console.log(response);
-            var response_n = $("#messages");
+            var response_n = $("#apis");
+            response_n.empty();
             for(var i = 0; i < response.length; i++){
-                response_n.append(`<div> <h3> ${response[i].title} </h3></div>`);
+                response_n.append(`<div class = "recipie" recipie_id = "${response[i]._id}"> <h5> ${response[i].title} </h5> <p> ${response[i].body}</p> <button id= "del_rec" class= "btn btn-danger btn-sm float-right">Delete</button></div>`);
             }
 
         }
     })
 }
+
