@@ -34,7 +34,7 @@ nav > a, li>a{
   clear: both;
 }
 li > a:link, li > a:visited{
-	font-size: 0.7vw;
+	font-size: 13px;
 	text-transform: uppercase;
 	font-weight: bold;
 	text-decoration: none;
@@ -132,7 +132,7 @@ div#collapsable-nav{
     height: 100%;
     margin: 100px 0px;
   }
-  Section#ContactUs>h2{
+  Section#ContactUs h2{
 	  font-weight: bold;
     color: rgb(162 221 250);
     font-size: 300%;
@@ -140,7 +140,7 @@ div#collapsable-nav{
   div.contact{
     display: flex;
     flex-direction: column;
-    width: 50%;
+    /* width: 50%; */
   }
   div.form-floating{
     padding: 15px 0px 0px;
