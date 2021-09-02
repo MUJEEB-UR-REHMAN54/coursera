@@ -65,10 +65,10 @@
 	<section id="ContactUs" class="container-fluid">
 		
 		<div class="row">
-			<div class="col-md-1 col-lg-2">
+			<div class="col-md-2 col-lg-3">
 				<h2>Contact Us</h2>
 			</div>
-			<div class="col-md-6 col-lg-5" >
+			<div class="col-md-5 col-lg-4" >
 				<div class= "contact mx-auto" action="backend.php">
 			
 					<div class="form-floating">
@@ -81,14 +81,7 @@
 						<label for="lname" class="floating-label"> Last Name: </label>
 						<input id="lname" type="text" class="form-control" placeholder="Raza" >
 					</div>
-					
-		
-					<div class="form-floating">
-						<label for="dob" class="floating-label"> Date of Birth: </label>
-						<input id="dob" type="date" class="form-control" >
-					</div>
-					
-		
+								
 					<div class="form-floating">
 						<label for="pnum" class="floating-label"> Phone Number: </label>
 						<input id="pnum" type="tel" class="form-control" placeholder="+92XXXXXXXXXX"> 
@@ -99,7 +92,7 @@
 						<input type="email" class="form-control" id="Email" placeholder="abc123@mail.com">
 					</div>
 		
-					<div class="form-floating">
+					<div class="form-floating text_area">
 						<label for="msg" class="floating-label"> Message: </label>
 						<textarea name="message" id="msg" cols="30" rows="10" class="form-control" placeholder="Message"></textarea>
 					</div>
@@ -110,14 +103,25 @@
 				
 			</div>
 
-			<div id="messages" class="col-md-5 col-lg-5"></div>
-			<h3>This is the apis call</h3>
-			<div id="apis">
-				
-			</div>
-			
+			<div id="messages" class="col-md-5"></div>
 		</div>
 		
+	</section>
+	<section id="APIs">
+		<h3>This is the apis calls</h3>
+		
+		<div class="form-group">
+			  <label for="title">Title</label>
+			  <input type="text" class="form-control" name="title" id="title" aria-describedby="_title" placeholder="title">
+			  <small id="_title" class="form-text text-muted">Please enter the title of the recipie</small>
+		</div>
+		
+		<div class="form-group">
+			  <label for="Body">Body</label>
+			  <textarea class="form-control" name="Body" id="Body" rows="3"></textarea>
+		</div>
+		
+		<div id="apis"></div>
 	</section>
 		
 

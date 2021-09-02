@@ -128,25 +128,28 @@ div#collapsable-nav{
   /*---------------------------------------------------------------------- End Main Content ----------------------------------------------------------------------*/
 
   /*---------------------------------------------------------------------- Section: Contact Us ----------------------------------------------------------------------*/
-  Section#ContactUs{
+  section#ContactUs{
     height: 100%;
     margin: 100px 0px;
   }
-  Section#ContactUs h2{
+  section#ContactUs h2{
 	  font-weight: bold;
     color: rgb(162 221 250);
     font-size: 300%;
   }
-  div.contact{
-    display: flex;
-    flex-direction: column;
-    /* width: 50%; */
+  div.contact div.form-floating{
+    float: left;
+    padding-right:5px ;
+    width: 50%;
+  }
+  div.contact div.text_area{
+    width: 100%;
   }
   div.form-floating{
     padding: 15px 0px 0px;
     
   }
-  div label.floating-label{
+  div label{
     font-weight: bold;
     opacity: .6;
     color: #fff;
@@ -193,7 +196,17 @@ div#collapsable-nav{
 
   /*---------------------------------------------------------------------- End Section: Contact Us ----------------------------------------------------------------------*/
 
+  /*---------------------------------------------------------------------- Section: APIs ----------------------------------------------------------------------*/
 
+  section#APIs{
+    padding-bottom: 100px;
+  }
+  section#APIs div.form-group{
+    float: left;
+    padding-right:5px ;
+    /* width: 200%; */
+  }
+  /*---------------------------------------------------------------------- End Section: Contact Us ----------------------------------------------------------------------*/
   
 /****************************************************************** Extra Large devices only ******************************************************************/
 @media (min-width: 1200px) {

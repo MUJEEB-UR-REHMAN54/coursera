@@ -233,7 +233,7 @@ function GetRequest(){
             var response_n = $("#apis");
             response_n.empty();
             for(var i = 0; i < response.length; i++){
-                response_n.append(`<div class = "recipie" recipie_id = "${response[i]._id}"> <h5> ${response[i].title} </h5> <p> ${response[i].body}</p> <button id= "del_rec" class= "btn btn-danger btn-sm float-right">Delete</button></div>`);
+                response_n.append(`<div class = "recipie" recipie_id = "${response[i]._id}"> <h5> ${response[i].title} </h5> <p> ${response[i].body}</p> <button id= "del_rec" class= "btn btn-danger btn-sm float-right">Delete</button> <button id= "edit_rec" class= "btn btn-warning btn-sm float-right">Edit</button></div>`);
             }
 
         }
