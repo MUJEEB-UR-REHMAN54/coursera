@@ -10,6 +10,8 @@ $(function(){
     $("#messages").on("click", "#Ed_btn", edit_msg);
     GetRequest();
     $("#apis").on("click", "#del_rec", DeleteRecord);
+    $("#apis").on("click", "#edit_rec", EditRecord);
+    $("#add_rec").click(AddRecord);
 
 });
 
@@ -209,8 +211,33 @@ function edit_msg(){
     del_msg(self);
 
 }
+
+function AddRecord(){
+    var _title = $("input[name = title]").val();
+    var _body = $("textarea[name= Body]").val();
+    $.ajax({
+        url:"https://usman-recipes.herokuapp.com/api/recipes",
+        method: "POST",
+        data: {title: _title, body: _body},
+        success: function(response){
+            console.log(response);
+            console.log("The recipie is added successfully");
+            GetRequest();
+        }
+    })
+}
+
+function EditRecord(){
+    var this_btn = $(this);
+    var parent_div = this_btn.closest(".recipie");
+    var _id = parent_div.attr("recipie_id"); 
+    var _title = parent_div.children("h5").html();
+    var _body = parent_div.children("p").html();
+    console.log(_title);
+    console.log(_body);
+}
 function DeleteRecord(){
-    console.log("Delete button is pressed");
+    console.log("Deleting Recipie");
     var this_btn = $(this);
     var parent_div = this_btn.closest(".recipie");
     var Id = parent_div.attr("recipie_id");
@@ -224,7 +251,7 @@ function DeleteRecord(){
 }
 
 function GetRequest(){
-    console.log("The function is exucuting.");
+    console.log("Getting Recipies.");
     $.ajax({
         url:"https://usman-recipes.herokuapp.com/api/recipes",
         method: "GET",
@@ -233,7 +260,7 @@ function GetRequest(){
             var response_n = $("#apis");
             response_n.empty();
             for(var i = 0; i < response.length; i++){
-                response_n.append(`<div class = "recipie" recipie_id = "${response[i]._id}"> <h5> ${response[i].title} </h5> <p> ${response[i].body}</p> <button id= "del_rec" class= "btn btn-danger btn-sm float-right">Delete</button> <button id= "edit_rec" class= "btn btn-warning btn-sm float-right">Edit</button></div>`);
+                response_n.append(`<div class = "recipie" recipie_id = "${response[i]._id}"> <h5> ${response[i].title} </h5> <p> ${response[i].body} <button id= "del_rec" class= "btn btn-danger btn-sm float-right">Delete</button> <button id= "edit_rec" class= "btn btn-warning btn-sm float-right">Edit</button></p> </div>`);
             }
 
         }
