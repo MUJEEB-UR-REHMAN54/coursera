@@ -12,6 +12,7 @@ $(function(){
     $("#apis").on("click", "#del_rec", DeleteRecord);
     $("#apis").on("click", "#edit_rec", EditRecord);
     $("#add_rec").click(AddRecord);
+    $("#update_rec").click(UpdateRecord);
 
 });
 
@@ -231,10 +232,31 @@ function EditRecord(){
     var this_btn = $(this);
     var parent_div = this_btn.closest(".recipie");
     var _id = parent_div.attr("recipie_id"); 
-    var _title = parent_div.children("h5").html();
-    var _body = parent_div.children("p").html();
-    console.log(_title);
-    console.log(_body);
+    // var _title = parent_div.children("h5").html();
+    // var _body = parent_div.children("p").html();
+    $.get("https://usman-recipes.herokuapp.com/api/recipes/"+_id, function(response){
+        $("#_Id").val(response._id);
+        $("#_Title").val(response.title);
+        $("#_Body").val(response.body);
+        $("#edit_record").modal("show");
+    });    
+}
+
+function UpdateRecord(){
+    var _id = $("#_Id").val();
+    var _title = $("#_Title").val();
+    var _body = $("#_Body").val();
+    $.ajax({
+        url:"https://usman-recipes.herokuapp.com/api/recipes/" + _id,
+        method: "PUT",
+        data: {title: _title, body: _body},
+        success: function(response){
+            console.log(response);
+            console.log("The recipie is updated successfully");
+            GetRequest();
+            $("#edit_record").modal("hide");
+        }
+    })
 }
 function DeleteRecord(){
     console.log("Deleting Recipie");

@@ -118,12 +118,45 @@
 		
 		<div class="form-group">
 			  <label for="Body">Body</label>
-			  <textarea class="form-control" name="Body" id="Body" rows="3"></textarea>
+			  <textarea class="form-control" name="Body" id="Body" rows="3" placeholder="body of the recipie"></textarea>
+		</div>
+		<div class="form-group">
+			<button id= "add_rec" type="button" class="btn btn-primary btn-sm">Add Recipie</button>
 		</div>
 		
-		<button id= "add_rec" type="button" class="btn btn-primary btn-sm">Add Recipie</button>
 		<div id="apis"></div>
 	</section>
+
+	<!-- Modal -->
+	<div class="modal fade" id="edit_record" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Update Recipie</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+				</div>
+				<div class="modal-body">
+					<input type="hidden" id="_Id">
+					<div class="form-group">
+						<label for="_title">Title</label>
+						<input type="text" class="form-control" name="title" id="_Title" aria-describedby="_title" placeholder="title">
+						<small id="_title" class="form-text text-muted">Please enter the title of the recipie</small>
+				  	</div>
+				  
+				  	<div class="form-group">
+						<label for="_Body">Body</label>
+						<textarea class="form-control" name="Body" id="_Body" rows="3" placeholder="body of the recipie"></textarea>
+				  	</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button id= "update_rec"type="button" class="btn btn-primary">Update</button>
+				</div>
+			</div>
+		</div>
+	</div>
 		
 
 	<footer class="panel-footer">
